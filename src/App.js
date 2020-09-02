@@ -4,7 +4,10 @@ import TodoList from './Todolist'
 
 function App() {
   return (
-    <TodoList />
+    <>                     
+    <TodoList /> 
+    <input type="text" />    
+    </>                     
   )
 }
 
