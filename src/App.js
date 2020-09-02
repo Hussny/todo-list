@@ -3,10 +3,10 @@ import TodoList from './Todolist'
 
 
 function App() {
-  const [todos, setTodos] = useState([])  // Object destructuring
+  const [todos, setTodos] = useState(['Todo 1', 'Todo 2'])  // Object destructuring
   return (
     <>                     
-    <TodoList /> 
+    <TodoList todoList={todos} /> 
     <input type="text" />
     <button>Add Todo</button>    
     <button>Clear Completed</button>
