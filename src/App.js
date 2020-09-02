@@ -3,6 +3,7 @@ import TodoList from './Todolist'
 
 
 function App() {
+  const [todos, setTodos] = useState([])  // Object destructuring
   return (
     <>                     
     <TodoList /> 
