@@ -39,7 +39,7 @@ function handleAddTodo(e){
 
   return (
     <>                     
-    <TodoList todos={todos} /> 
+    <TodoList todos={todos} toggleTodo={toggleTodo} /> 
     <input ref={todoNameRef} type="text" />
     <button onClick={handleAddTodo}>Add Todo</button>    
     <button>Clear Completed</button>
