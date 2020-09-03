@@ -3,7 +3,7 @@ import TodoList from './Todolist'
 
 
 function App() {
-  const [todos, setTodos] = useState(['Todo 1', 'Todo 2'])  // Object destructuring
+  const [todos, setTodos] = useState([{ id:1, name:'Todo 1', complete: false}])  // Object destructuring
   return (
     <>                     
     <TodoList todos={todos} /> 
