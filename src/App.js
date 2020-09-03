@@ -2,14 +2,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import TodoList from './Todolist'
 import { v4 as uuidv4 } from 'uuid';
 
-const LOCAL_STORAGE_KEY = 'todos'
+const LOCAL_STORAGE_KEY = 'todoApp.todos'
 function App() {
   const [todos, setTodos] = useState([])  // Object destructuring
   const todoNameRef= useRef()
 
+  // Show during reload
+  useEffect(() =>{
+    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+   if (storageTodos) setTodos(storageTodos)
+  }, [])
+
   // Saves in Local Storage during reload
   useEffect(() => {
-    localStorage.setItem()
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify
+      (todos))
   }, [todos])
 
 function handleAddTodo(e){
