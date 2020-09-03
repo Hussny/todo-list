@@ -19,6 +19,14 @@ function App() {
       (todos))
   }, [todos])
 
+  // TOGGLE FROM COMPLETE TO INCOMPLETE AND VICE VERSA.
+function toggleTodos(id) {
+  const newTodos = [...todos]
+  const todo = newTodos.find(todo => todo.id === id)
+  todo.complete = !todo.complete
+  setTodos(newTodos)
+}
+
 function handleAddTodo(e){
  const name = todoNameRef.current.value
  if ( name ==='') return
