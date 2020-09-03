@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Simple Todolist App
+## Simple todo list app using react that covers.
+•	cover create-react-app.
+•	Components.
+•	State.
+•	Props. 
+•	Rendering.
+•	event handling.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
