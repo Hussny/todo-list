@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import TodoList from './Todolist'
 
 
 function App() {
-  const [todos, setTodos] = useState([{ id:1, name:'Todo 1', complete: false}])  // Object destructuring
+  const [todos, setTodos] = useState([])  // Object destructuring
+  const todoNameRef= useRef()
+
+function handleAddTodo(e){
+ const name = todoNameRef.current.value
+ if ( name ==='') return
+ console.log(name);
+}
+
   return (
     <>                     
     <TodoList todos={todos} /> 
-    <input type="text" />
-    <button>Add Todo</button>    
+    <input ref={todoNameRef} type="text" />
+    <button onClick={handleAddTodo}>Add Todo</button>    
     <button>Clear Completed</button>
     <div>0 left to do</div>
     </>                     
